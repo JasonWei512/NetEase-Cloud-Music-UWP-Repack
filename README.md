@@ -26,6 +26,22 @@ Github 源：
 
 3、双击 x86 / x64 / ARM 安装包安装。
 
+4、双击 x86 或 x64 安装包安装。
+
+## UWP 版本无法登录的解决方案
+
+点击发现音乐 → 最新音乐把我喜欢的音乐调出来
+
+从创建的歌单 → 我喜欢的音乐那里点击登录
+
+PS: 应该只支持网易账号和手机号
+
+## 本地回环代理设置
+
+管理员命令行运行：
+
+`checknetisolation loopbackexempt -a -n="1f8b0f94.122165ae053f_kq4t7q4nstjby"`
+
 # 打包方式说明
 
 见 [该 issue](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/issues/3#issuecomment-636415035)。
