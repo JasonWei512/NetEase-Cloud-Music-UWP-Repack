@@ -38,7 +38,7 @@
 
 4. 重启应用后登录
 
-![网易云音乐 UWP 更改服务地址](https://i0.hdslb.com/bfs/article/5a5c6a3e97209bdc94e9a8440c7a4abff93fcb72.gif)
+- [查看动图演示](https://i0.hdslb.com/bfs/article/5a5c6a3e97209bdc94e9a8440c7a4abff93fcb72.gif)
 
 **方法二：**
 
