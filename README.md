@@ -4,15 +4,9 @@
 
 # 下载
 
-Github 源：
 [x86 (32位)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x86.appx) | 
 [x64 (64位)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x64.appx) | 
 [ARM (未测试)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20arm.appx)
-
-国内镜像：
-[x86 (32位)](https://github.strcpy.cn/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x86.appx) | 
-[x64 (64位)](https://github.strcpy.cn/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x64.appx) | 
-[ARM (未测试)](https://github.strcpy.cn/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20arm.appx)
 
 # 安装说明
 
@@ -28,15 +22,33 @@ Github 源：
 
 4、双击 x86 或 x64 安装包安装。
 
-# UWP 版本无法登录的解决方案
+# 无法登录的解决方案
 
-点击 发现音乐 → 最新音乐，把 我喜欢的音乐 调出来
+请选择以下其中一种方法：
 
-点击 创建的歌单 → 我喜欢的音乐 → “未登录”头像，然后登录
+**[方法一（推荐）：](https://www.bilibili.com/read/cv9556360/)**
 
-PS: 应该只支持网易账号和手机号
+1. 点击 左下角“未登录”头像 → 关于网易云音乐，来到关于界面
 
-# 本地回环代理设置
+2. 对界面右上角的网易云音乐 Logo 连续单击5下，然后迅速右击，会弹出调试对话框（如果不行则多试几次）
+
+3. 将对话框中的服务地址 ```http://music.163.com``` 中的 ```http``` 改为 ```https```，即改为 ```https://music.163.com```
+
+4. 重启应用后登录
+
+![网易云音乐 UWP 更改服务地址](https://i0.hdslb.com/bfs/article/5a5c6a3e97209bdc94e9a8440c7a4abff93fcb72.gif)
+
+**方法二：**
+
+1. 点击 发现音乐 → 最新音乐，此时“我喜欢的音乐”会出现在应用左栏
+
+2. 点击 创建的歌单 → 我喜欢的音乐 → “未登录”头像，然后登录
+
+- 注：应该只支持网易账号和手机号
+
+# 进阶：本地回环代理设置
+
+（如果你不知道这是做什么的，那么请忽略这一项）
 
 管理员命令行运行：
 
