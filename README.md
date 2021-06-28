@@ -4,7 +4,9 @@
 
 # 下载
 
-[x86 (32位)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x86.appx) | 
+[下载地址](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/archive/refs/heads/master.zip)
+
+单独安装包：[x86 (32位)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x86.appx) | 
 [x64 (64位)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20x64.appx) | 
 [ARM (未测试)](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/raw/master/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90UWP%20%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%89%88%20arm.appx)
 
