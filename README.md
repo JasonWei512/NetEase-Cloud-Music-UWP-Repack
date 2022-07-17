@@ -54,6 +54,11 @@
 
 `checknetisolation loopbackexempt -a -n="1f8b0f94.122165ae053f_kq4t7q4nstjby"`
 
+
+# 已知问题
+
+在 Windows11 22H2 版本之上，无法下载音乐，见 [该 issue](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/issues/24) 。
+
 # 打包方式说明
 
 见 [该 issue](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/issues/3#issuecomment-636415035)。
