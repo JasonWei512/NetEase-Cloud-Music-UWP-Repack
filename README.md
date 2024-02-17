@@ -1,17 +1,24 @@
 # 简介
 
-经典的 网易云音乐 UWP 重打包版，可以与官方版共存。
+经典的**网易云音乐UWP**重打包版，可以与最新官方版共存。
+
+此版本合并了100和400尺寸图形资源，并首次修复了Win11系统下的文件访问权限问题。
+
 
 # 下载
 
-下载安装包： [x64 (64位)](./raw/master/cloudmusic.uwp_repack_x64.appx) | [x86 (32位)](./raw/master/cloudmusic.uwp_repack_x86.appx) | [arm32](./raw/master/cloudmusic.uwp_repack_arm.appx)
+下载安装包：
+[x64 (64位)](https://github.com/exp-3/Cloud-Music-UWP-Repacked/raw/main/cloudmusic.uwp_repack_x64.appx) | 
+[x86 (32位)](https://github.com/exp-3/Cloud-Music-UWP-Repacked/raw/main/cloudmusic.uwp_repack_x86.appx) | 
+[arm32](https://github.com/exp-3/Cloud-Music-UWP-Repacked/raw/main/cloudmusic.uwp_repack_arm.appx)
 
-下载工具包： [全平台通用](./archive/refs/heads/tools.zip)
+下载工具包： 
+[非必要,按需下载](https://github.com/exp-3/Cloud-Music-UWP-Repacked/archive/refs/heads/tools.zip)
 
 
-# 安装说明
+# 安装
 
-由于Windows只允许安装来自**微软商店**或者**企业开发者**的appx/msix软件包，
+由于Windows只允许安装来自**微软商店**或者**企业开发者**的appx/msix软件包，<br />
 所以我们需要先安装**自签名证书**来伪装成企业开发者，才能安装第三方软件包。
 
 请选择以下其中一种方法：
@@ -28,9 +35,10 @@
 
 #### 方法二：
 
-1. 下载工具包并解压缩，找到 ```data``` 文件夹里的 ```3.cer``` ，直接双击打开
+1. 下载 [证书文件](https://github.com/exp-3/Cloud-Music-UWP-Repacked/raw/tools/data/3.cer) ，然后直接打开。
 
-> 如果您不知道这是什么，那么请忽略：~~如果您修改过.cer的文件关联，那么请在右键菜单的打开方式中选择加密外壳扩展。~~
+ - 如果您不知道这是什么，那么请忽略：
+   ~~如果您修改过.cer的文件关联，那么请在右键菜单的打开方式中选择加密外壳扩展。~~
 
 2. 点击```安装证书```，将会进入"证书导入向导"
 
@@ -40,73 +48,39 @@
 
 5. 双击 x86 / x64 / ARM 的 ```appx``` 安装包安装
 
-# 无法登录的解决方案
 
-请选择以下其中一种方法：
+# 已知问题及解决方法
 
-#### 方法一（推荐）：
+#### 1. 无法登录账号
 
-![演示动图](assets/sethttps.gif)
+敬请参阅 [解决方法](assets/login.md)
 
-1. 点击 左下角“未登录”头像 → 关于网易云音乐，来到关于界面
+#### 2. 无法下载音乐
 
-2. 对界面右上角的网易云音乐 Logo 连续单击5下，然后迅速右击，会弹出调试对话框（如果不行则多试几次）
+在22H2及更高版本的Windows11中下载音乐时提示文件存储失败。
 
-3. 将对话框中的服务地址 ```http://music.163.com``` 中的 ```http``` 改为 ```https```，即改为 ```https://music.163.com```，然后确认
+敬请参阅 [解决方法](assets/download.md)
 
-4. 重启应用后登录
+#### 3. 文字消失不见
 
-> 详情请参见 [b站专栏文章](https://www.bilibili.com/read/cv9556360/)
+在新版本Windows11中有概率会出现软件内的文字消失不见的问题。
 
-#### 方法二：
+安装完成后，前几次使用本软件时最容易出现，之后出现概率大大降低。
 
-1. 点击 发现音乐 → 最新音乐，此时“我喜欢的音乐”会出现在应用左栏
+尚不清楚此问题出现的原因，也无从修复。
 
-2. 点击 创建的歌单 → 我喜欢的音乐 → “未登录”头像，然后登录
+如果遇到，直接关闭窗口再打开即可恢复正常，基本不影响使用。
 
-> 注：此方法应该只支持网易账号和手机号
+# 进阶玩法
 
-# 无法下载音乐的解决方案
+> 如果您不知道这些是做什么的，那么请忽略它们
 
-在 **Windows11 22H2** 及之后版本的系统中，存在无法下载音乐的问题：显示文件保存失败。
+##### 本地回环代理设置
 
-请选择以下其中一种解决方法：
-
-#### 方法一（激进）：
-
-> **实现原理：**修改特定文件夹权限，使其可被软件访问。
-
-1. 下载工具包，务必解压缩所有文件 (不要在压缩包内打开)
-
-2. 双击打开```授权访问外部路径.vbs```
- - 选择"是"将授权默认的下载目录 (用户文件夹>音乐)
- - 选择"否"可以选择其他路径进行授权 (需要手动在软件内同步修改下载路径)
-
->-  授权自定义下载目录时请特别注意：
-  - 授权自定义目录时，请尽可能减小授权范围到专用的文件夹，
-    尽量避免授权无关路径，尤其是不要授权整个磁盘或者%userprofile%路径！
-  - 假设您想使用 **D:\个人\音乐\CloudMusic** 作为下载路径，
-    那么只需要授权 **CloudMusic** 这个文件夹即可；
-    需慎重选用 **~~D:\个人\音乐~~** ，绝对不要随意授权 **~~D:\个人~~** 甚至 **~~D:\~~**
-
-#### 方法二（保守）：
-
-1. 下载工具包，务必解压缩所有文件 (不要在压缩包内打开)
-
-2. 
-
-# 进阶：本地回环代理设置
-
-> 如果您不知道这是做什么的，那么请忽略这一项
-
-管理员命令行运行：
+以管理员身份在命令行运行：
 
 `checknetisolation loopbackexempt -a -n="cloudmusic.uwp_6p888gkwt396e"`
 
-#其他已知问题
-
-在 Windows11 22H2 版本之上，无法下载音乐，见 [该 issue](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/issues/24) 。
-
-# 打包方式说明
+##### 打包方式说明
 
 见 [该 issue](https://github.com/JasonWei512/NetEase-Cloud-Music-UWP-Repack/issues/3#issuecomment-636415035)。
